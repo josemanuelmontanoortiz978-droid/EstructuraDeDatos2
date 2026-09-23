@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Árbol AVL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Visualizador de Árbol AVL</h1>
+            <p>Árbol Binario de Búsqueda Auto-Balanceable</p>
+        </header>
+
+        <main>
+            <div class="controls-panel">
+                <form id="tree-form" class="form-group">
+                    <input type="number" id="node-value" placeholder="Valor del nodo" required autocomplete="off">
+                    <button type="submit" class="btn btn-primary" id="btn-insert">Insertar</button>
+                    <button type="button" class="btn btn-secondary" id="btn-delete">Eliminar</button>
+                </form>
+                <div class="actions">
+                    <button type="button" class="btn btn-danger" id="btn-clear">Limpiar Árbol</button>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="tree-canvas" width="1000" height="600"></canvas>
+            </div>
+            
+            <div id="messages" class="messages-area"></div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
